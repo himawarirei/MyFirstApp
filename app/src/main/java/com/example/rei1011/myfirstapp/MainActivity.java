@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (view == mButton1) {
             Log.d(TAG, "onClick Button1");
+            mStarbucksWebView.getSettings().setJavaScriptEnabled(true);
             //標準ブラウザをキャンセル
             mStarbucksWebView.setWebViewClient(new WebViewClient());
             //URL
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         {
             Log.d(TAG, "onClick Button2");
+            mYahooWebView.getSettings().setJavaScriptEnabled(true);
             //標準ブラウザをキャンセル
             mYahooWebView.setWebViewClient(new WebViewClient());
             //URL
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         {
             Log.d(TAG, "onClick Button3");
+            mGoogleWebView.getSettings().setJavaScriptEnabled(true);
             //標準ブラウザをキャンセル
             mGoogleWebView.setWebViewClient(new WebViewClient());
             //URL
