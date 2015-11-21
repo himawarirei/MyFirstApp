@@ -58,19 +58,32 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.button_1, R.id.button_2,R.id.button_3})
+
+    @OnClick({R.id.button_1, R.id.button_2, R.id.button_3})
     public void OnClik(View view) {
-        if (view == mButton1 ) {
+
+        if (view == mButton1) {
             Log.d(TAG, "onClick Button1");
+            //標準ブラウザをキャンセル
+            mStarbucksWebView.setWebViewClient(new WebViewClient());
+            //URL
             mStarbucksWebView.loadUrl("http://www.starbucks.co.jp/");
 
-        } else if(view == mButton2) {
+        } else if (view == mButton2)
+
+        {
             Log.d(TAG, "onClick Button2");
+            //標準ブラウザをキャンセル
+            mYahooWebView.setWebViewClient(new WebViewClient());
             //URL
             mYahooWebView.loadUrl("http://www.yahoo.co.jp/");
 
-        } else if(view == mButton3) {
+        } else if (view == mButton3)
+
+        {
             Log.d(TAG, "onClick Button3");
+            //標準ブラウザをキャンセル
+            mGoogleWebView.setWebViewClient(new WebViewClient());
             //URL
             mGoogleWebView.loadUrl("https://www.google.co.jp/");
 
@@ -87,30 +100,31 @@ public class MainActivity extends AppCompatActivity {
         myWebView.loadUrl("http://www.starbucks.co.jp/");
         */
     }
-/*
-     @OnClick(R.id.button_2)
-     public void OnClik2() {
-      setContentView(R.layout.activity_main);
-      WebView myWebView = (WebView)findViewById(R.id.web_view_yahoo);
-      //標準ブラウザをキャンセル
-      myWebView.setWebViewClient(new WebViewClient());
-      //URL
-      myWebView.loadUrl("http://www.yahoo.co.jp/");
-      }
 
-    @OnClick(R.id.button_3)
-    public void OnClik3() {
-//        Log.d(TAG, "OnClick : ");
-        setContentView(R.layout.activity_main);
-        WebView myWebView = (WebView)findViewById(R.id.web_view_google);
-        //標準ブラウザをキャンセル
-        myWebView.setWebViewClient(new WebViewClient());
-        //URL
-        myWebView.loadUrl("https://www.google.co.jp/");
+    /*
+         @OnClick(R.id.button_2)
+         public void OnClik2() {
+          setContentView(R.layout.activity_main);
+          WebView myWebView = (WebView)findViewById(R.id.web_view_yahoo);
+          //標準ブラウザをキャンセル
+          myWebView.setWebViewClient(new WebViewClient());
+          //URL
+          myWebView.loadUrl("http://www.yahoo.co.jp/");
+          }
+
+        @OnClick(R.id.button_3)
+        public void OnClik3() {
+    //        Log.d(TAG, "OnClick : ");
+            setContentView(R.layout.activity_main);
+            WebView myWebView = (WebView)findViewById(R.id.web_view_google);
+            //標準ブラウザをキャンセル
+            myWebView.setWebViewClient(new WebViewClient());
+            //URL
+            myWebView.loadUrl("https://www.google.co.jp/");
 
 
-    }
-*/
+        }
+    */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
